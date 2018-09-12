@@ -1,0 +1,2 @@
+- include: ../site1/main.yaml
+- include: ../site2/main.yaml

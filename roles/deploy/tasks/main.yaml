@@ -3,8 +3,8 @@
     name: caretaker
   vars:
     sot: github
-    repo_name: https://github.com/termlen0/rhte2018_demo
-    #archive_dir: config_archives
+    repo_name: https://github.com/termlen0/rhte_2018
+    archive_dir: config_archives
 
 
 

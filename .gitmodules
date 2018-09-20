@@ -1,3 +1,6 @@
 [submodule "roles/caretaker"]
 	path = roles/caretaker
 	url = https://github.com/termlen0/caretaker
+[submodule "roles/ansible-network.content_store"]
+	path = roles/ansible-network.content_store
+	url = https://github.com/termlen0/content_store

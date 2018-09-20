@@ -20,7 +20,7 @@
       include_role:
         name: deploy
 
-    - name: ansible-network.content_store
+    - name: UPDATE THE SoT REPOSITORY
       include_role:
         name: ansible-network.content_store
         tasks_from: config

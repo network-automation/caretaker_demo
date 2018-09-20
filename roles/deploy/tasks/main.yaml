@@ -1,19 +1,33 @@
-- name: ENSURE THAT THERE ARE NO OOB CHANGES ON THE NETWORK
-  import_role:
-    name: caretaker
-  vars:
-    sot: github
-    repo_name: https://github.com/termlen0/rhte_2018
-    archive_dir: config_archives
+---
+# - name: ENSURE THAT THERE ARE NO OOB CHANGES ON THE NETWORK
+#   import_role:
+#     name: caretaker
+#   vars:
+#     sot: github
+#     repo_name: https://github.com/termlen0/rhte_2018
+#     archive_dir: config_archives
 
+# Original task list --begin--
 
-
-# - name: ENSURE THAT REMOTE ROUTERS HAVE NECESSARY CONFIGURATIONS
-#   ios_config:
+# - name: GENERATE CONFIGS FOR REMOTE ROUTERS
+#   template:
 #     src: render_remote.j2
+#     dest: "configs/{{ inventory_hostname }}.cfg"
 #   when: "'remote' in inventory_hostname"
 
-# - name: ENSURE THAT CORE ROUTERS HAVE NECESSARY CONFIGURATIONS
+# - name: GENERATE CONFIGS FOR CORE ROUTERS
 #   ios_config:
 #     src: render_core.j2
+#     dest: "configs/{{ inventory_hostname }}.cfg"
 #   when: "'core' in inventory_hostname"
+
+
+- name: ENSURE THAT REMOTE ROUTERS ARE CONFIGURED
+  ios_config:
+    src: render_remote.j2
+  when: "'remote' in inventory_hostname"
+
+- name: ENSURE THAT CORE ROUTERS ARE CONFIGURED
+  ios_config:
+    src: render_core.j2
+  when: "'core' in inventory_hostname"

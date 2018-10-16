@@ -6,14 +6,19 @@
   any_errors_fatal: true
 
   vars:
-    config_store_scm_url: "git@github.com:termlen0/rhte_2018_archive.git"
-    config_store_scm_private_key_file: "{{ playbook_dir }}/files/id_rsa_demo"
+    config_store_scm_url: "git@github.com:network-automation/caretaker_demoarchive.git"
+    #config_store_scm_private_key_file: "{{ playbook_dir }}/files/id_rsa_demo"
 
   tasks:
-    - name: INVOKE CARETAKER TO PREVENT OOB CONFLICTS
-      include_role:
-        name: caretaker
-        tasks_from: get_running
+    - name: FAIL IF PRIVATE KEY IS NOT INPUT
+      fail:
+        msg: "SSH PRIVATE KEY IS NEEDED"
+      when: not config_store_scm_private_key
+
+    # - name: INVOKE CARETAKER TO PREVENT OOB CONFLICTS
+    #   include_role:
+    #     name: caretaker
+    #     tasks_from: get_running
 
     - name: DEPLOY THE CONFIGURATIONS
       include_role:

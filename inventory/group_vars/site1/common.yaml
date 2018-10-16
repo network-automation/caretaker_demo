@@ -3,9 +3,11 @@ snmp:
   ro:
     - Site1-Snmpro
     - Ansible123
+    - RHTE
+    - TEST123
   rw:
     - site1-AnsibleFest2018
   contact:
-    - site1-netops
+    - RHTE-netops
 
 ospf_area: 0.0.0.0

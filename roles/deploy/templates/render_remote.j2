@@ -12,6 +12,7 @@ interface Loopback{{ intf_id }}
  description {{ properties.desc }}
  ip address {{ properties.net | ipaddr('1') | ipaddr('address') }} {{ properties.net | ipaddr('netmask') }}
  ip ospf network point-to-point
+ no shutdown
 {% endfor %}
 
 

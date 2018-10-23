@@ -12,3 +12,6 @@ all:
     site2:
       children:
         tag_location_site2:
+
+tag_location_site1:
+tag_location_site2:

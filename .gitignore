@@ -3,3 +3,4 @@ download.yaml
 files/*
 reconcile.yaml
 reconcile.yaml
+private_key.yaml

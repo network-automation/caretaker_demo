@@ -12,3 +12,10 @@ all:
     site2:
       children:
         tag_location_site2:
+        
+  hosts:
+    site1_core1:
+    site2_core1:
+    site1_remote1:
+    site2_remote2:
+    

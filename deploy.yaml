@@ -19,6 +19,8 @@
     #   include_role:
     #     name: caretaker
     #     tasks_from: get_running
+    
+    - debug: var=circuit
 
     - name: DEPLOY THE CONFIGURATIONS
       include_role:

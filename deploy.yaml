@@ -14,13 +14,13 @@
       fail:
         msg: "SSH PRIVATE KEY IS NEEDED"
       when: not config_store_scm_private_key
+      run_once: yes
 
     # - name: INVOKE CARETAKER TO PREVENT OOB CONFLICTS
     #   include_role:
     #     name: caretaker
     #     tasks_from: get_running
     
-    - debug: var=hostvars[inventory_hostname]
 
     - name: DEPLOY THE CONFIGURATIONS
       include_role:

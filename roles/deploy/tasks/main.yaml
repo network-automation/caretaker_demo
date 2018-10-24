@@ -21,6 +21,13 @@
 #     dest: "configs/{{ inventory_hostname }}.cfg"
 #   when: "'core' in inventory_hostname"
 
+- debug: var=hostvars[inventory_hostname]
+
+- debug: var=circuit
+
+- debug: var=loopback
+
+- debug: var=loopback.0
 
 - name: ENSURE THAT REMOTE ROUTERS ARE CONFIGURED
   ios_config:

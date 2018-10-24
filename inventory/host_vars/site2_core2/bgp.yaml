@@ -4,10 +4,10 @@ neighbors:
   - peer_ip: 10.200.200.1
     peer_as: 65501
     advertised_networks:
-      - net: "{{ loopback.0.net | ipaddr('network') }}"
-        mask: "{{ loopback.0.net | ipaddr('netmask') }}"
-      - net: "{{ loopback.1.net | ipaddr('network') }}"
-        mask: "{{ loopback.1.net | ipaddr('netmask') }}"
+      - net: "{{ loopback['0']['net'] | ipaddr('network') }}"
+        mask: "{{ loopback['0']['net'] | ipaddr('netmask') }}"
+      - net: "{{ loopback['1']['net'] | ipaddr('network') }}"
+        mask: "{{ loopback['1']['net'] | ipaddr('netmask') }}"
       - net: "{{ tunnel_network | ipaddr('network') }}"
         mask: "{{ tunnel_network | ipaddr('netmask') }}"
       - net: "10.1.22.0"

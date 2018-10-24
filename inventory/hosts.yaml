@@ -15,7 +15,7 @@ all:
         
   hosts:
     site1_core1:
-    site2_core1:
+    site2_core2:
     site1_remote1:
     site2_remote2:
     

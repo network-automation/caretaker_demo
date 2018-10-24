@@ -20,7 +20,7 @@
     #     name: caretaker
     #     tasks_from: get_running
     
-    - debug: var=circuit
+    - debug: var=loopback
 
     - name: DEPLOY THE CONFIGURATIONS
       include_role:

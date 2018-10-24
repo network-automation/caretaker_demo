@@ -1,7 +1,7 @@
 loopback:
   0:
     desc: INTERNAL INTERFACE LOOPBACK0
-    net: "{{ circuit.2.network }}"
+    net: "{{ circuit['2']['network'] }}"
   1:
     desc: INTERNAL INTERFACE LOOPBACK1 - NEW CHANGE
-    net: "{{ circuit.3.network }}"
+    net: "{{ circuit['3']['network'] }}"

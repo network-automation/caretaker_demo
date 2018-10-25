@@ -6,8 +6,8 @@
   any_errors_fatal: true
 
   vars:
-    config_store_scm_url: "git@github.com:network-automation/caretaker_demoarchive.git"
-    #config_store_scm_private_key_file: "{{ playbook_dir }}/files/id_rsa_demo"
+    #config_store_scm_url: "git@github.com:network-automation/caretaker_demoarchive.git"
+    config_store_scm_private_key_file: "{{ playbook_dir }}/files/id_rsa_demo"
 
   tasks:
     - name: FAIL IF PRIVATE KEY IS NOT INPUT
